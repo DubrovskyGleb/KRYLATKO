@@ -1,0 +1,30 @@
+.callback{
+    @include popup(300, 240);
+    input{
+        @include input(220, 40);
+    }
+    button{
+        @include button(220, 45);
+    }
+    
+}
+
+.callback__form{
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100px) rotateX(45deg);
+}
+.thank{
+    @include popup(300, 140);
+}
+
+.popup-active{
+    opacity: 1;
+    visibility: visible;
+    .callback__form{
+        opacity: 1;
+        transform: perspective(0px) translate(0px, 0px) rotateX(0deg);
+    }
+}
+
+

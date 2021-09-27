@@ -1,0 +1,84 @@
+@import "mixin";
+
+@import "nullstyle";
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    padding: 0 20px 0 20px;
+    max-width: 960px;
+    height: 100%;
+    margin: auto;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-text{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #63a5bc;
+        text-transform: uppercase;
+    }
+}
+
+.connect{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    &-phone{
+        font-size: 24px;
+        font-weight: 700;
+        color: #5e5e5e
+    }
+    &-callback{
+        font-size: 14px;
+        line-height: 27px;
+        font-weight: 500;
+        text-decoration: underline;
+        color: #5892a6
+    }
+}
+
+.stels{
+    width: 100%;
+    height: 1px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.lock{
+    overflow: hidden;
+}
+
+@import "header";
+
+@import "hero";
+
+@import "why";
+
+@import "promo";
+
+@import "statistic";
+
+@import "cert";
+
+@import "advantage";
+
+@import "discount";
+
+@import "contrast";
+
+@import "location";
+
+@import "footer";
+
+@import "popup";
+
+@import "media";

@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .privacy{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        text-decoration: underline;
+        color: #68b0c9;
+    }
+    .legal{
+        text-align: end;
+        &__text{
+            font-size: 14px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #505050;
+        }
+    }
+}

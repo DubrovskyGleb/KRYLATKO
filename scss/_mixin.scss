@@ -1,0 +1,91 @@
+// адаптивное свойство
+
+$maxWidthContainer: 960;
+
+@mixin adaptiv-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: $startSize + px;
+  @media (max-width: #{$maxWidthContainer + px}) {
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+  }
+}
+
+@mixin input($width, $height){
+  $border: $height / 2;
+  width: $width + px;
+  height: $height + px;
+  border: 1px solid #e8e8e8;
+  border-radius: $border + px;
+  font-size: 13px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #9c9c9c;
+  text-align: center;
+
+}
+
+@mixin button($width, $height) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  $border: $height / 2;
+  width: $width + px;
+  height: $height + px;
+  border-radius: $border + px;
+  background-color: #68b0c9;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+@mixin popup($width, $height){
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(1, 1, 23, 0.8);
+  top:0;
+  left:0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease 0s;
+  &__form{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: $width + px;
+      height: $height + px;
+      padding: 20px 0;
+      position: relative;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 38px 0px rgba(103,175,201,0.34);
+      border-radius: 20px;
+      &-cancel{
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          top: -40px;
+          right: 0;
+      }
+      &-title{
+          font-size: 20px;
+          line-height: 1.2;
+          font-weight: 700;
+          color: #5892a6;
+      }
+      &-subtitle{
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 300;
+          color: #000000;
+          max-width: 240px;
+          text-align: center;
+      }
+  }
+}

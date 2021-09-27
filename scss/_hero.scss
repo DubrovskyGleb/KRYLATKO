@@ -1,0 +1,87 @@
+.hero-space{
+    width: 100%;
+    height: auto;
+    background: url(../img/hero/hero.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+    &-title{
+        font-weight: 700;
+        color: #535353;
+        max-width: 600px;
+        text-align: end;
+        @include adaptiv-value("margin-top", 80, 50);
+        @include adaptiv-value("line-height", 50, 45);
+        @include adaptiv-value("font-size", 41, 30);
+
+        transform: translate(120%, 0);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active{
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+    }
+    &-subtitle{
+        @include adaptiv-value("line-height", 42, 30);
+        @include adaptiv-value("font-size", 27, 20);
+        font-weight: 500;
+        color: #5892a6;
+        transform: translate(120%, 0);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active{
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: all 0.8s ease 0.2s;
+        }
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        width: 300px;
+        height: 240px;
+        padding: 40px 0 35px 0;
+        margin: 60px 0 60px 0;
+        border-radius: 20px;
+        box-shadow: 0px 0px 38px 0px rgba(103,175,201,0.34);
+        transform: translate(120%, 0);
+        opacity: 0;
+        transition: all 0.8s ease 0s;
+        &._active{
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: all 0.8s ease 0.4s;
+        }
+        &-title{
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #5892a6
+        }
+        &-subtitle{
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #000000;
+        }
+        input{
+            @include input(220, 40);
+        }
+        button{
+            @include button(220, 45);
+        }
+    } 
+}

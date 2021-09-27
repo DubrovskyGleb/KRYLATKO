@@ -1,0 +1,50 @@
+.location-space{
+    width: 100%;
+    height: auto;
+    background-color: #ecf3f8;
+}
+
+.location{
+    width: 100%;
+    display: flex;
+    padding:50px 0;
+    &-map{
+        width: 50%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        &-picup{
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #535353;
+            text-align: center;
+        }
+        &-address{
+            max-width: 60%;
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+            color: #68b0c9;
+            text-align: center;
+        }
+        &-or{
+            font-size: 16px;
+            line-height: 1.2;
+            font-weight: 300;
+            color: #535353;
+        }
+        .location-button{
+            @include button(260, 45);
+        }
+    }
+}

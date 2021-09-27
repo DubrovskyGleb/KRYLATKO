@@ -1,0 +1,210 @@
+@media screen and(max-width: 720px){
+    .promo__stiker{
+        top: 28%;
+        right: 55%;
+    }
+
+    .statistic{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .cert{
+        &__content{
+            flex-direction: column;
+            &-document{
+                width: 100%;
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+            &-text{
+                width: 100%;
+                height: auto;
+                .warning{
+                    justify-content: center;
+                }
+                & > p{
+                    margin-top: 20px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .advantage-text{
+        font-size: 14px;
+    }
+
+    .advantage-title{
+        font-size: 18px;
+    }
+
+    .discount__stiker{
+        right: 55%;
+    }
+
+    .contrast{
+        flex-direction: column;
+        align-items: center;
+        &__block{
+            width: 70%;
+            .minus-title{
+                text-align: center;
+            }
+            .plus-title{
+                text-align: center;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .location{
+        flex-direction: column;
+        align-items: center;
+        &-map{
+            width:70%;
+        }
+        &__content{
+            width: 90%;
+            height: 300px;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media screen and(max-width: 640px){
+    .hero{
+        align-items: center;
+        &-title{
+            text-align: center;
+        }
+        &-subtitle{
+            text-align: center;
+        }
+    }
+
+    .why{
+        .reverse{
+            p{
+                text-align: center;
+            }
+        }
+    }
+
+    .why__card{
+        width: 100%;
+        &-title{
+            text-align: center;
+        }
+        &-description{
+            text-align: center;
+        }
+    }
+
+    .advantage{
+        flex-direction: column;
+        align-items: center;
+        &__block{
+            width: 70%;
+            &-content p{
+                text-align: center;
+            }
+        }
+    }
+
+    .advantage-title{
+        font-size: 20px;
+    }
+
+    .advantage-text{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and(max-width: 560px){
+    .promo{
+        justify-content: center;
+        &__stiker{
+            display: none;
+        }
+    }
+
+    .discount{
+        justify-content: center;
+        &__stiker{
+            display: none;
+        }
+    }
+
+    .contrast{
+        &__block{
+            width: 90%;
+        }
+    }
+
+    .location{
+        &-map{
+            width: 100%;
+        }
+    }
+
+    .footer{
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-around;
+        .legal{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and(max-width: 500px){
+    .hero{
+        &-subtitle{
+            padding-top: 20px;
+        }
+    }
+
+    .advantage__block{
+        width: 100%;
+    }
+}
+
+@media screen and(max-width: 440px){
+    .statistic{
+        grid-template-columns: 1fr;
+    }
+
+    .contrast{
+        &__block{
+            width: 100%;
+        }
+    }
+
+    .why{
+        padding-bottom: 30px;
+        &__block{
+            img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 380px){
+    .connect{
+        &-phone{
+            font-size: 20px;
+        }
+    }
+
+    .logo-text{
+        display: none;
+    }
+
+    .header{
+        height: 74px;
+    }
+}

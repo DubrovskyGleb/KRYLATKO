@@ -1,0 +1,74 @@
+.discount-space{
+    background: url(../img/discount/discount.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.discount{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &__stiker{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 25%;
+        right: 48%;
+        border-radius: 75px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-title{
+            font-size: 17px;
+            line-height: 47px;
+            font-weight: 700;
+            color: #68b0c9;
+        }
+        &-old{
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 300;
+            color: #1e1e1e;
+            text-decoration: line-through;
+        }
+        &-new{
+            font-size: 30px;
+            line-height: 47px;
+            font-weight: 700;
+            color: #d04545;
+            border-top: 1px solid #e8e8e8;
+        }
+    }
+    &__form{
+        width: 300px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-title{
+            font-size: 20px;
+            line-height: 34px;
+            font-weight: 700;
+            color: #535353;
+            text-align: center;
+        }
+        &-subtitle{
+            font-size: 20px;
+            line-height: 1.2;
+            background-color: white;
+            color: #68b0c9;
+            text-align: center;
+            margin-bottom: 30px
+        }
+        input{
+            @include input(260, 46);
+            margin-bottom: 20px
+        }
+        button{
+            @include button(260, 46);
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.promo-space{
+    background: url(../img/promo/promo.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.promo{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    &__stiker{
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 39%;
+        right: 48%;
+        border-radius: 75px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-old{
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 300;
+            color: #1e1e1e;
+            text-decoration: line-through;
+        }
+        &-new{
+            font-size: 30px;
+            line-height: 47px;
+            font-weight: 700;
+            color: #d04545;
+            border-top: 1px solid #e8e8e8;
+        }
+    }
+    &__content{
+        margin: 70px 0 50px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title{
+            @include adaptiv-value("font-size", 55, 40);
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #535353;
+        }
+        &-subtitle{
+            @include adaptiv-value("font-size", 26, 24);
+            font-weight: 900;
+            color: #535353;
+        }
+        &-gift{ 
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 10px;
+            }
+            p{
+                font-size: 25px;
+                line-height: 38px;
+                text-transform: none;
+                color: #68b0c9;
+            }
+        }
+        &-form{
+            width: 275px;
+            height: 200px;
+            border: 5px solid #ffffff;
+            border-radius: 22.5px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 20px 0 20px 0;
+            .promo-button{
+                @include button(200, 50);
+            }
+        }
+    }
+}
+
+.promo__form-text{
+    width: 100%;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    p{
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #d35656;
+    }
+    .number{
+        position: absolute;
+        right: 44%;
+        font-size: 30px;
+        line-height: 31px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+}
